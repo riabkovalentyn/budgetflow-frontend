@@ -7,27 +7,19 @@ import { JSX } from 'react';
  */
 const Nav = (): JSX.Element => {
   return (
-    <nav>
-      <ul>
-        {/* Dashboard link */}
+    <nav className="border-b">
+      <ul className="container mx-auto p-4 flex gap-4">
         <li>
-          <Link href="/">
-            <a href="">Dashboard</a>
-          </Link>
+          <Link href="/dashboard">Dashboard</Link>
         </li>
-
-        {/* Transactions link */}
         <li>
-          <Link href="/transactions">
-            <a href="">Transactions</a>
-          </Link>
+          <Link href="/transactions">Transactions</Link>
         </li>
-
-        {/* Goals link */}
         <li>
-          <Link href="/goals">
-            <a href="">Goals</a>
-          </Link>
+          <Link href="/goals">Goals</Link>
+        </li>
+        <li>
+          <Link href="/ai-advisor">AI Advisor</Link>
         </li>
       </ul>
     </nav>
