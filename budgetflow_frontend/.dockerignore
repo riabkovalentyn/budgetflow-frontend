@@ -1,5 +1,14 @@
 node_modules
 .next
+npm-debug.log
+.npmrc
+.env
+.env.*
+Dockerfile
+.git
+**/.git
+node_modules
+.next
 .git
 Dockerfile
 npm-debug.log*

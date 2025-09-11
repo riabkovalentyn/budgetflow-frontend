@@ -19,6 +19,9 @@ const Nav = (): JSX.Element => {
           <li>
             <Link className={linkClass} href="/ai-advisor">AI Advisor</Link>
           </li>
+          <li>
+            <Link className={linkClass} href="/bank">Bank</Link>
+          </li>
         </ul>
       </div>
     </nav>
