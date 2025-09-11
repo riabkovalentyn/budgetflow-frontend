@@ -17,8 +17,11 @@ const demoGoals: Goal[] = [
 const Goals = () => {
     const goals = demoGoals;
     return (
-        <div>
-            <h1 className="text-2xl font-semibold mb-4">Goals</h1>
+        <div className="space-y-4">
+            <div>
+                <h1 className="text-2xl font-semibold tracking-tight">Goals</h1>
+                <p className="text-sm text-gray-600">Your savings targets in one place</p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {goals.map((goal, index) => (
                     <GoalCard key={index} goal={goal} />

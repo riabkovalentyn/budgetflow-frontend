@@ -15,19 +15,21 @@ export default function TransactionsPage() {
 	if (error) return <p className="text-red-600">{errorMessage(error)}</p>;
 
 	return (
-		<div>
-			<h1 className="text-2xl font-semibold mb-4">Transactions</h1>
-			<ul className="space-y-2">
-						{data?.items?.map((t: Transaction, i: number) => (
-							<li key={`${t.date}-${i}`} className="border rounded p-3 flex justify-between">
-						<span>{t.date}</span>
-						<span>{t.description}</span>
-						<span className={t.amount < 0 ? "text-red-600" : "text-green-600"}>
-							{t.amount}
-						</span>
-					</li>
-				))}
-			</ul>
+		<div className="space-y-4">
+			<h1 className="text-2xl font-semibold tracking-tight">Transactions</h1>
+			<div className="rounded-xl border border-black/5 bg-white overflow-hidden">
+				<ul className="divide-y divide-black/5">
+					{data?.items?.map((t: Transaction, i: number) => (
+						<li key={`${t.date}-${i}`} className="p-3 sm:p-4 grid grid-cols-3 gap-2 items-center">
+							<span className="text-sm text-gray-500">{t.date}</span>
+							<span className="font-medium text-gray-900 truncate">{t.description}</span>
+							<span className={`text-right ${t.amount < 0 ? "text-red-600" : "text-green-600"}`}>
+								{t.amount}
+							</span>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 }
