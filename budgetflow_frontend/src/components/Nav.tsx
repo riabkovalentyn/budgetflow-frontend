@@ -1,10 +1,5 @@
 import Link from 'next/link';
 import { JSX } from 'react';
-
-/**
- * A navigation component for the budgeting app.
- * @returns A JSX element to render in the browser.
- */
 const Nav = (): JSX.Element => {
   return (
     <nav className="border-b">

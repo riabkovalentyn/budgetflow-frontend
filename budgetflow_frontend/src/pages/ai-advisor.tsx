@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { api, getErrorMessage } from "@/lib/api";
+import { api, errorMessage } from "@/lib/api";
 
 type Advice = { tips: string[] };
 
@@ -25,7 +25,7 @@ export default function AiAdvisorPage() {
         </button>
       </div>
       {isLoading && <p>Loading...</p>}
-      {error && <p className="text-red-600">{getErrorMessage(error)}</p>}
+  {error && <p className="text-red-600">{errorMessage(error)}</p>}
       <ul className="space-y-2">
         {data?.tips?.map((t: string, i: number) => (
           <li key={`tip-${i}`} className="border rounded p-3">

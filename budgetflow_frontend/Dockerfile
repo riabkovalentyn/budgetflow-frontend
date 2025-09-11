@@ -1,6 +1,3 @@
-# Multistage Dockerfile for Next.js app
-
-# 1) Build
 FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package*.json ./
@@ -10,11 +7,9 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# Disable Next telemetry in containers
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
-# 2) Runtime
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production

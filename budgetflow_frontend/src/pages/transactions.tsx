@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { api, getErrorMessage } from "@/lib/api";
+import { api, errorMessage } from "@/lib/api";
 import type { Transaction } from "@/components/types/types";
 
 export default function TransactionsPage() {
@@ -12,7 +12,7 @@ export default function TransactionsPage() {
 	});
 
 	if (isLoading) return <p>Loading...</p>;
-	if (error) return <p className="text-red-600">{getErrorMessage(error)}</p>;
+	if (error) return <p className="text-red-600">{errorMessage(error)}</p>;
 
 	return (
 		<div>
