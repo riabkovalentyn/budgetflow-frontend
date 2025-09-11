@@ -50,13 +50,13 @@ const Goals = () => {
                     }}
                 >
                     <input
-                        className="h-10 w-full px-3 rounded-lg border border-black/10 bg-white text-sm focus:outline-none focus:ring-4 focus:ring-black/10"
+                        className="h-10 w-full px-3 rounded-lg border border-black/20 bg-white text-base text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-4 focus:ring-black/20 focus:border-black/40 shadow-inner"
                         placeholder="Title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
                     <input
-                        className="h-10 w-full px-3 rounded-lg border border-black/10 bg-white text-sm focus:outline-none focus:ring-4 focus:ring-black/10"
+                        className="h-10 w-full px-3 rounded-lg border border-black/20 bg-white text-base text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-4 focus:ring-black/20 focus:border-black/40 shadow-inner"
                         placeholder="Description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
